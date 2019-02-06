@@ -1,0 +1,21 @@
+{
+  "wrap": [
+    {
+      "filepath": "conf/hibench.conf",
+      "properties": {
+        "hibench.scale.profile": "tiny",
+        "hibench.default.map.parallelism": "200",
+        "hibench.default.shuffle.parallelism": "200"
+      }
+    },
+    {
+      "filepath": "conf/spark.conf",
+      "properties": {
+        "hibench.yarn.executor.num": "2",
+        "hibench.yarn.executor.cores": "2",
+        "spark.executor.memory": "4g",
+        "spark.driver.memory": "4g"
+      }
+    }
+  ]
+}
