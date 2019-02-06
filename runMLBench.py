@@ -12,7 +12,7 @@ class triggerMlBench:
 		logging.getLogger("requests").setLevel(logging.WARNING)
 		self.logger=logging.getLogger(__name__)
 		if len(sys.argv)==1:
-			self.tests=["lr","als","svm","linear","kmeans"]
+			self.tests=["lr","als","svm","linear","kmeans","ridge"]
 		else:
 			self.tests=sys.argv[1].split(',')
 

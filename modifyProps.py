@@ -18,7 +18,7 @@ class modProp:
 					if not prop.strip(' \n'):
 						w.write('\n')
 						continue
-					if prop.startswith('#') or not len(shlex.split(prop))==2:
+					if prop.startswith('#') or not len(shlex.split(prop))==2 or '"' in prop:
 						w.write(prop+'\n')
 						continue
 					key,val=shlex.split(prop)
