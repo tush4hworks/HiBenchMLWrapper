@@ -35,7 +35,7 @@ class triggerMlBench:
 			self.runShell('bin/workloads/ml/{}/spark/run.sh'.format(test))
 			self.logger.info("-Finished running {} test".format(test))	
 		self.logger.info('**** Finished tests ****')
-		self.logger.info('report/hibench.report','r+').read()
+		self.logger.info(open('report/hibench.report','r+').read())
 
 if __name__=='__main__':
 	triggerMlBench().benchmark()
