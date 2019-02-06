@@ -20,7 +20,7 @@ class triggerMlBench:
 		try:
 			self.logger.info("+Running command {}".format(cmd))
 			result=subprocess.check_output(cmd,stderr=subprocess.STDOUT,shell=True)
-			self.logger.debubg(result)
+			self.logger.debug(result)
 			self.logger.info("-Finished running command {}".format(cmd))
 		except Exception as e:
 			self.logger.warn("-Error while running command {}".format(cmd))
