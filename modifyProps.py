@@ -31,6 +31,9 @@ class modProp:
 		except Exception as e:
 			print e.__str__()
 
+	def getEnvSettings(self):
+		return [self.params['environment']['FROVEDIS_COMMAND'],self.params['environment']['COMMAND']]
+
 	def configure(self):
 		for conf in self.params['wrap']:
 			self.modifyProperties(conf['filepath'],conf['properties'])

@@ -17,5 +17,9 @@
         "spark.driver.memory": "4g"
       }
     }
-  ]
+  ],
+  "environment":{
+    "FROVEDIS_COMMAND":"--driver-java-options \"-Djava.library.path=$EXTRA_LIBRARY_PATH\" --conf spark.executor.extraLibraryPath=$EXTRA_LIBRARY_PATH --jars $EXTRA_JAR_PATH --conf spark.files=/opt/nec/nosupport/frovedis/ve/bin/frovedis_server",
+    "COMMAND":"mpirun -np 4 -x "
+  }
 }
